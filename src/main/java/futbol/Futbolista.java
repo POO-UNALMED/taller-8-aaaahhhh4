@@ -2,6 +2,9 @@ package futbol;
 
 public abstract class Futbolista implements Comparable<Object>{
 		private String nombre;
+		private int edad;
+		private final String posicion;
+		
 		public String getNombre() {
 			return nombre;
 		}
@@ -17,8 +20,7 @@ public abstract class Futbolista implements Comparable<Object>{
 		public String getPosicion() {
 			return posicion;
 		}
-		private int edad;
-		private final String posicion;
+
 		public Futbolista(String nom, int ed, final String pos){
 			posicion = pos;
 			edad=ed;
@@ -28,7 +30,7 @@ public abstract class Futbolista implements Comparable<Object>{
 			this("Maradona",30,"delantero");
 		}
 		public String toString() {
-			return "El futbolista "+ nombre +" tiene "+ edad +", y juega de " + posicion;
+			return  "El futbolista "+this.nombre+" tiene "+this.edad+", y juega de " + this.posicion;
 		}
 		public boolean equals(Futbolista f) {
 				return this.toString().equals(f.toString());
