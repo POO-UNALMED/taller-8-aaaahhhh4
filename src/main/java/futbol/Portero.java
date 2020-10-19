@@ -25,9 +25,7 @@ public class Portero extends Futbolista {
 		return "El futbolista "+ this.getNombre() +" tiene "+ this.getEdad() +", y juega de "+ this.getPosicion()
 				+ " con el dorsal "+ dorsal+ ". Le han marcado "+ golesRecibidos;
 	}
-	public int compareTo(Portero f) {
-		return this.golesRecibidos - f.golesRecibidos;
-	}
+
 	@Override
 	public boolean jugarConLasManos() {
 		// TODO Auto-generated method stub
@@ -36,7 +34,11 @@ public class Portero extends Futbolista {
 	@Override
 	public int compareTo(Object o) {
 		// TODO Auto-generated method stub
-		return 	this.golesRecibidos - ((Portero)o).golesRecibidos;
+		return 	Math.abs(this.golesRecibidos - ((Portero)o).golesRecibidos);
 	}
-
+	public static void main(String[] args) {
+		Portero f1 = new Portero("Antonio", 23, (short) 6, (byte) 1);
+		Portero f2 = new Portero("Santiago", 23, (short) 15, (byte) 8);
+		System.out.println(f1.compareTo(f2));
+	}
 }
