@@ -22,7 +22,7 @@ public class Jugador extends Futbolista {
 	}
 
 	public String toString() {
-		return "El futbolista "+ this.getNombre() +" tiene "+ this.getEdad()+ ", y juega de posicion "+ this.getPosicion()
+		return "El futbolista "+ this.getNombre() +" tiene "+ this.getEdad()+ ", y juega de "+ this.getPosicion()
 				+ " con el dorsal "+ dorsal + ".Ha marcado " + golesMarcados;
 	}
 
